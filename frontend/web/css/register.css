@@ -1,0 +1,81 @@
+.register{
+   position: relative;
+   width: 100%;
+   min-height: 100vh;
+   overflow: hidden;
+   background: rgba(0,0,0,0.5);
+}
+.register .back{
+   position: absolute;
+   top: -2%;
+   left: -2%;
+   width: 104%;
+   height: 104%;
+   background: url('../img/register.jpg');
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   z-index: -2;
+   /* filter: blur(5px); */
+}
+.register .form,
+.register .content{
+   float: left;
+   min-height: 100vh;
+}
+
+#particles-js{z-index: -1;}
+
+.register .content{
+   width: calc(100% - 480px);
+   display: flex;
+   align-items: center;
+   /* justify-content: center; */
+}
+.register .form{
+   position: relative;
+   width: 480px;
+   display: flex;
+   align-items: center;
+}
+.register .form::after,
+.register .content .info::after{
+   content: '';
+   display: block;
+   position: absolute;
+   top: 0; left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0,0.7);
+   z-index: -1;
+   filter: blur(3px);
+}
+.register .content .info{
+   position: relative;
+   width: 100%;
+   background: none !important;
+}
+
+@media screen and (max-width: 1200px){
+   .register .form,
+   .register .content{
+      width: 100%;
+      min-height: auto;
+      text-align: center;
+   }
+   .size60{
+      font-size: 48px;
+   }
+   .size48{
+      font-size: 40px;
+   }
+}
+
+@media screen and (max-width: 480px){
+   .size60{
+      font-size: 40px;
+   }
+   .size48{
+      font-size: 32px;
+   }
+}
